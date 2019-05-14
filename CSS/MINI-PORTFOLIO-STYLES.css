@@ -2,7 +2,18 @@
 /* CSS Document */
 
 <style>
-	
+
+body {
+    background-color: skyblue;
+    color: rebeccapurple;
+}
+
+h1 {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
