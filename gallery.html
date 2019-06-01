@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/NEWgallery.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<title>Donk works!!</title>
+
+</head>
+	
+<body>
+	
+	<center><a href="index.html">
+  <img src="DONKS/RETURN BUTTON.png" alt="button"/>
+</a></center>
+
+<h2 style="text-align:center"></h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 10</div>
+    <center><img src="GALLERY/SPARKLE.png" style="width:90%"></center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 10</div>
+    <center><img src="GALLERY/BIRDHOUSE.png" style="width:85%"></center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 10</div>
+    <center><img src="GALLERY/CAVE-BOSS.png" style="width:90%"></center>
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 10</div>
+    <center><img src="GALLERY/TREATS.png" style="width:80%"></center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 10</div>
+    <center><img src="GALLERY/FANTASY-MULE.png" style="width:40%"></center>
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 10</div>
+    <center><img src="GALLERY/RUN1.png" style="width:80%"></center>
+  </div>
+	
+	<div class="mySlides">
+    <div class="numbertext">7 / 10</div>
+    <center><img src="GALLERY/RUN2.png" style="width:80%"></center>
+  </div>
+	
+	<div class="mySlides">
+    <div class="numbertext">8 / 10</div>
+    <center><img src="GALLERY/RUN3.png" style="width:80%"></center>
+  </div>
+	
+	<div class="mySlides">
+    <div class="numbertext">9 / 10</div>
+    <center><img src="GALLERY/HAUNTED-PORTRAIT.png" style="width:80%"></center>
+  </div>
+	
+	<div class="mySlides">
+    <div class="numbertext">10 / 10</div>
+    <center><img src="GALLERY/GNARLY.png" style="width:70%"></center>
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">prev</a>
+  <a class="next" onclick="plusSlides(1)">next</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="GALLERY/SPARKLE.png" style="width:100%" onclick="currentSlide(1)" alt="SparkleHorse Cover">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="GALLERY/BIRDHOUSE.png" style="width:100%" onclick="currentSlide(2)" alt="TVPaint Backyard">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="GALLERY/CAVE-BOSS.png" style="width:100%" onclick="currentSlide(3)" alt="Cave Boss: The Rothgar">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="GALLERY/TREATS.png" style="width:100%" onclick="currentSlide(4)" alt="Goatlings Monster Masquerade 2018">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="GALLERY/FANTASY-MULE.png" style="width:70%" onclick="currentSlide(5)" alt="Videogame concept boxart">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="GALLERY/RUN1.png" style="width:100%" onclick="currentSlide(6)" alt="Fantasy Mule Concept Art">
+    </div>
+	 <div class="column">
+      <img class="demo cursor" src="GALLERY/RUN2.png" style="width:100%" onclick="currentSlide(7)" alt="Fantasy Mule Concept Art">
+    </div>
+	  <div class="column">
+      <img class="demo cursor" src="GALLERY/RUN3.png" style="width:100%" onclick="currentSlide(8)" alt="Fantasy Mule Concept Art">
+    </div>
+	  <div class="column">
+      <img class="demo cursor" src="GALLERY/HAUNTED-PORTRAIT.png" style="width:90%" onclick="currentSlide(9)" alt="Goatlings Monster Masquerade 2017">
+    </div>
+	  <div class="column">
+      <img class="demo cursor" src="GALLERY/GNARLY.png" style="width:80%" onclick="currentSlide(10)" alt="Alphabet Bumper Highlight">
+    </div>
+  </div>
+</div>
+	
+	<footer><center>@animedonkey 2019. All rights reserved. </center> </footer>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
