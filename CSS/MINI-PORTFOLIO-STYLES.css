@@ -3,41 +3,92 @@
 
 <style>
 
+
+section, aside, nav, article, figure, figcaption {
+				display: block;}
+
+section.courses {
+				float: left; /*The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).*/
+				width: 1000px;
+				border-right: 1px solid #eeeeee;}
+			article {
+				clear: both; /*The clear property is directly related to floats. If the element can fit horizontally in the space next to another element which is floated, it will. Unless you apply clear to that element in the same direction as the float. Then the element will move down below the floated element.*/
+				overflow: auto; /*The overflow property specifies what should happen if content overflows an element's box. This property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area. Note: The overflow property only works for block elements with a specified height.*/
+				width: 98%;}
+			hgroup {
+				margin-top: 40px;}
+			figure {
+				float: left;
+				width: 290px;
+				height: 220px;
+				padding: 5px;
+				margin: 20px;
+				border: 1px solid #eeeeee;} 
+			figcaption {
+				font-size: 90%;
+				text-align: left;}
+			figure2 {
+				float: right;
+				width: 290px;
+				height: 220px;
+				padding: 5px;
+				margin: 20px;
+				border: 1px solid #eeeeee;} 
+			figcaption2 {
+				font-size: 90%;
+				text-align: right;}
+			aside {
+				width: 230px;
+				float: left;
+				padding: 0px 0px 0px 20px;}
+			aside section a {
+				display: block;
+				padding: 10px;
+				border-bottom: 1px solid #eeeeee;}
+			aside section a:hover {
+				color: #985d6a;
+				background-color: #efefef;}
+
+.entries {
+    box-shadow: rgba(0,0,0,0.1)5px 5px;
+    position: relative;
+    z-index: 3;
+    width: 900px;
+	height: 400px;
+    padding: 10px;
+    margin: 30px 0 30px 200px;
+    border: 2px outset #d1d1d1;
+    background-color: #fff;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+	font-size: 18px;
+}
+
+figure {
+				float: left;
+				width: 350px;
+				height: 400px;
+				padding: -5px;
+				margin: 15px;
+				border: 0px solid #eeeeee;} 
+figcaption {
+				font-size: 90%;
+				text-align: left;}
+
 body {
-    background-color: skyblue;
-    color: rebeccapurple;
+  background-image: url("https://66.media.tumblr.com/b5ee654f684331b6c6cb02e5af389549/tumblr_inline_ps90xlaAXZ1uu5q2s_540.jpg");
+  background-repeat: repeat;
+  background-color: #cccccc;
+	font-family: Comfortaa, cursive;
 }
 
 h1 {
-    border-width: 1px;
+    border-width: 0px;
     border-style: solid;
     border-color: black;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
 
 .active {
   background-color: #4CAF50;
@@ -94,5 +145,73 @@ position: left;
 	
 	img.pic {
 }	
+
+#nav {
+  background-color: steelblue;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+	
+#nav li {
+  display: inline;
+  padding-right: 70px;
+}
+
+#nav a {
+  text-decoration: none;
+  font-family: Comfortaa, cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.3em;
+  color: white;
+}
+
+#nav a:hover {
+  text-decoration: none;
+  font-family: Comfortaa, cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.3em;
+  color: black;
+  background-color: white;
+}
+
+#nav a.active{
+  background-color: white;
+  color: black;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+background-image: url("");
+  background-repeat: repeat;
+  background-color: #cccccc;
+}
 
 </style>
